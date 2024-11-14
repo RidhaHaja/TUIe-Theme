@@ -1,0 +1,264 @@
+#!/system/bin/sh
+#ascii art
+#RidaHaja - AmaN
+APPNAME=${0##*/}
+
+i=$(echo $'\u005C\U2060\u005C') # \\
+i1=$(echo $'\u005C\U2060\u005C\_') # \\_ 
+i_Phone=$(echo $'\uf42c')
+i_OS=$(echo $'\uE70e')
+i_user=$(echo $'\uf2bd')
+i_CPU=$(echo $'\uF986')
+i_Kernel=$(echo $'\')
+i_term=$(echo $'\uf68c')
+
+D_LOGO=$(dirname $0)
+N_LOGO=$APPNAME
+
+ANDROID_VERSION=`getprop ro.build.version.release`
+BUILDID=`getprop ro.build.id`
+DEVICE=`getprop persist.sys.devicename`
+HARDWARE=`getprop ro.hardware`
+KERNEL_V=`uname -srm | tr '[:upper:]' '[:lower:]'`
+MANUFACTURER=`getprop ro.product.manufacturer`
+TYPE=`getprop ro.fota.type`
+VERSION=`getprop ro.build.fota.version`
+VERSION_1=`getprop ro.fota.version`
+ZRAM=`free -h | awk '/^Swap:/{printf "%g %s/%gGB\n", $4,$3,$2}'`
+ZRAM_100=`free | awk '/^Swap:/{printf "(%.0f%%)",$4*100/$2}'`
+
+format="30" # detik
+TARGET="/storage/emulated/0/t-ui/expert.xml"
+
+###cuaca=$(curl -s http://wttr.in/banjarmasin\?0T\&amp;lang=id)
+
+tuie ()
+{
+  printf "%s\n"\
+        "  _________       __  __    ________  ______       "\
+        " /________/\     /_/\/_/\  /_______/\/_____/\      "\
+        " \__.::.__\/_____\:\ \:\ \ \__.::._\/\::::_\/_     "\
+        "    \::\ \ /____/$i:\ \:\ \   \::\ \  \:\/___/\    "\
+        "     \::\ $i1:::\/ \:\ \:\ \  _\::\ \__\::___\/_   "\
+        "      \::\ \        \:\_\:\ \/__\::\__/$i:\____/\  "\
+        "       \__\/  tuie   \_____\/\________\/ \_____\/  "
+}
+
+bunga ()
+{
+  printf "%s\n"\
+        "                 _       _ _                        "\
+        "               _(_)_   _{ ' }_                wWWWw "\
+        "   @@@@       (_)@(_) { '.!.' }   _     @@@@  (___) "\
+        "  @@()@@ wWWWw  (_)\  '._/Y\_.' _(_)_  @@()@@   Y   "\
+        "   @@@@  (___)     '|/) {_,_}  (_(®)_)  @@@@   \|/  "\
+        "    /      Y      (\|/    |/)   ,/(_)  (\|      |/  "\
+        " (\|       |/      \|     |/  (\|        |/)   \|   "\
+        "   |/tuie \|///  $i\|//$i\|/// \|/)   $i\|//  $i|// "\
+        "^^^^^^^^^^^^^^^^^^^^^^^^•$i_user $(whoami)•($i_CPU $MANUFACTURER)•^^^^^"\
+        "$i_Phone $TYPE $VERSION$VERSION_1"
+info_
+}
+
+bunga1 ()
+{
+ printf "%s\n"\
+        "           _                              "\
+        "          [E|                             "\
+        "     .-=====|-.                           "\
+        "     |  tuie                              "\
+        "     |$(date +_%d__%m_)|___                        "\
+        "         ||                               "\
+        "         ||             ,,,          .*.  "\
+        "         ||   www      {{®}}         ***  "\
+        "  ,;,    ||   )_(,;;;,  ~Y~           V   "\
+        "  <_>  \ ||   \|/ \_/   \|   (')    (\|/) "\
+        "  \|/  $i||  $i|   |//   |/   |  (Y) \|/  "\
+        "__\|//_$i|///_$i/_\|//__\|//_)|/_\)/__|_  "
+}
+
+buku ()
+{
+padding=10
+  printf "%${padding}s : %${padding}s : %s\n"\
+        "$(uname -r)" "[$i_Kernel ]  [$i_OS ]" "$ANDROID_VERSION ($BUILDID)"\
+        "$(uname -m)" "[$i_term ]  [$i_Phone ]" "$HARDWARE"
+  
+  printf "%s\n"\
+        "   zRAM [+]  $ZRAM $ZRAM_100                  "\
+        " __   /                                       "\
+        "('/\ /                                        "\
+        "'=\/\ __...--~~~~~-._   _.-~~~~~--...__       "\
+        " '=\/\  Kernel [$i_Kernel ]  \ / Android [$i_OS ]  $i     "\
+        "  '=\/ Architect [$i_term ] V  Hardware [$i_Phone ]  $i    "\
+        "  //_\___--~~~~~~-._  |  _.-~~~~~~--...__$i   "\
+        " //  ) (..----~~~~._\ | /_.~~~~----.....__$i  "\
+        "===( RAM )==========//|$i===================  "\
+        "____\___/___________'---'_______STORAGE_____  "
+}
+
+jendela ()
+{
+  printf "%s\n"\
+        "               _           _               "\
+        "              //\         /$i              "\
+        "             //  \______ /  $i             "\
+        "            //   /       \   $i            "\
+        "           //   /         \   $i           "\
+        "          //   /   sSSSs   \   $i          "\
+        "         //_  /   sSSSsSs   \  _$i         "\
+        "        //'_\     Ss. . s     /_,$i        "\
+        "       //   \'   Ss\ _ /Ss  , /   $i       "\
+        "      //   / \ \sSs_) (_sSs/ / \   $i      "\
+        "     //   /   \_|_  \ /  _|_/   \   $i     "\
+        "     $i  /      sS\ _^_ /ss      \  //     "\
+        "      $i/          )   (          \//      "\
+        "_______'•$(whoami)•($DEVICE)•'_______"\
+        "$TYPE $VERSION$VERSION_1"
+  info_
+}
+
+info_ (){
+printf "%s\n"\
+        "$i_OS Android $ANDROID_VERSION ($BUILDID)"\
+        "$i_Kernel Kernel $KERNEL_V"
+}
+
+custom_ ()
+{
+cat "$D_LOGO/$N_LOGO.txt"
+echo ""
+info_
+}
+
+##### TIME #####
+Jam ()
+{
+kalender=`cal`
+TIME=$(date +"%H:%M")
+
+N0=( '  ▄▄▄  ' ' █  ▄█ ' ' █ █ █ ' ' █▀  █ ' '  ▀▀▀  ')
+N1=( '  ▄▄   ' '   █   ' '   █   ' '   █   ' '  ▀▀▀  ')
+N2=( '  ▄▄▄  ' ' █   █ ' '  ▄▄▄▀ ' ' █     ' ' ▀▀▀▀▀ ')
+N3=( '  ▄▄▄  ' ' ▀   █ ' '   ▀▀▄ ' ' ▄   █ ' '  ▀▀▀  ')
+N4=( ' ▄   ▄ ' ' █   █ ' ' ▀▀▀▀█ ' '     █ ' '     ▀ ')
+N5=( ' ▄▄▄▄▄ ' ' █   ▀ ' ' ▀▀▀▀▄ ' ' █   █ ' '  ▀▀▀  ')
+N6=( '  ▄▄▄  ' ' █   ▀ ' ' █▀▀▀▄ ' ' █   █ ' '  ▀▀▀  ')
+N7=( ' ▄▄▄▄▄ ' ' ▀  ▄▀ ' '   █   ' '   █   ' '   ▀   ')
+N8=( '  ▄▄▄  ' ' █   █ ' ' ▄▀▀▀▄ ' ' █   █ ' '  ▀▀▀  ')
+N9=( '  ▄▄▄  ' ' █   █ ' ' ▀▄▄▄█ ' ' ▄   █ ' '  ▀▀▀  ')
+NC=( '   ' ' ▄ ' '   ' ' ▀ ' '   ')
+TS=('' '' '' '' '' )
+
+Q=$(expr ${#TIME} - 1)
+for i in $( seq 0 $Q)
+do
+  for index in ${!TS[*]}; do
+    case "${TIME:$i:1}" in
+    "1")
+        TS[$index]=${TS[$index]}${N1[$index]}
+        ;;
+    "2")
+        TS[$index]=${TS[$index]}${N2[$index]}
+        ;;
+    "3")
+        TS[$index]=${TS[$index]}${N3[$index]}
+        ;;
+    "4")
+        TS[$index]=${TS[$index]}${N4[$index]}
+        ;;
+    "5")
+        TS[$index]=${TS[$index]}${N5[$index]}
+        ;;
+    "6")
+        TS[$index]=${TS[$index]}${N6[$index]}
+        ;;
+    "7")
+        TS[$index]=${TS[$index]}${N7[$index]}
+        ;;
+    "8")
+        TS[$index]=${TS[$index]}${N8[$index]}
+        ;;
+    "9")
+        TS[$index]=${TS[$index]}${N9[$index]}
+        ;;
+    "0")
+        TS[$index]=${TS[$index]}${N0[$index]}
+        ;;
+    ":")
+        TS[$index]=${TS[$index]}${NC[$index]}
+        ;;
+    *)
+        echo "${TIME:$i:1}"
+        ;;
+    esac
+  done
+done
+  
+printf "%s\n"\
+        "$kalender"\
+        " » $(date +%d-%m-%Y) « "\
+        "${TS[0]}"\
+        "${TS[1]}"\
+        "${TS[2]}"\
+        "${TS[3]}"\
+        "${TS[4]}"
+
+### sed -i.bak "s/\(<custom_command_timeout value=\"\).*\(\"\/>\)/\1$format\2/" $TARGET ####
+}
+
+print_error ()
+{
+# Print an error message
+    echo "Invalid option: '$1'. Type \`$APPNAME -h\` to show help."
+    exit 1
+}
+
+_help ()
+{
+  printf "%s\n"\
+        "-a, --bunga,  --flower   "\
+        "-b, --buku,   --book     "\
+        "-c, --custom  >> get from $N_LOGO.txt"\
+        "-d, --jendela, --window  "\
+        "-e, --bunga1,  --flower1 "\
+        "-tgl, --Calendar         "\
+        "-h, --help               "\
+        "-%, --tuie               "
+        printf "($D_LOGO/$N_LOGO.txt)" 
+}
+
+# mulai dari sini.
+
+for pilih in $@
+do
+    case $pilih in
+        -a|--bunga|--flower)
+            bunga
+            ;;
+        -b|--buku|--book)
+            buku
+            ;;
+        -c|--custom)
+            custom_
+            ;;
+        -d|--jendela|--wimdow)
+            jendela
+            ;;
+        -e|--bunga1|--flower1)
+            bunga1
+            ;;
+        -tgl|--Calendar)
+            Jam
+            ;;         
+        -%|--tuie)
+            tuie
+            ;;
+        -h|--help)
+            _help
+            ;;
+         *)
+            print_error $pilih
+            ;;
+    esac
+done

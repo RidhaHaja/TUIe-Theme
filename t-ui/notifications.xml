@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NOTIFICATIONS>
+
+<show_notifications value="true"/>
+<app_notification_enabled_default value="true"/>
+
+<default_notification_color value="teal"/>
+<notification_format value="┌──────────┐%n│ %t1 │  %pkg%n└──────────┘%n⌥▩¯╲___&#128640;$  %[100][#81c8be]title : %n%text%n──────────────────── ••••%n%n"/>
+
+<click_notification value="true"/>
+<long_click_notification value="true"/>
+<notification_popup_exclude_app value="true"/>
+<notification_popup_exclude_notification value="true"/>
+<notification_popup_reply value="true"/>
+
+<!-- Enable/Disable apps -->
+
+<org.telegram.messenger enabled="true" format="1"/>
+<com.android.messaging enabled="true" format="2"/>
+<com.android.dialer enabled="true" format="3"/>
+<com.google.android.gm enabled="true" format="4"/>
+<ru.zdevs.zarchiver enabled="true" format="5"/>
+<com.android.deskclock enabled="true" format="6"/>
+<com.lonelycatgames.Xplore enabled="true" color="#fad000" format="8"/>
+
+<com.android.providers.downloads enabled="false"/> 
+<com.adguard.android enabled="false"/>
+
+
+<!-- Formats -->
+
+<!-- telegram -->
+<format id="1" value="┌──────────┐%n│ %t1 │  %app%n└──────────┘%n⌥▩¯╲___&#128640;$  %[100][#81c8be]title : %n%text%n──────────────────── ••••%n%n"/>
+
+<!-- messaging -->
+<format id="2" value=" %n
+__i 
+%n|---|       
+%n|[]| %app
+%n|:::|  [%t1]                   
+%n|:::| %[#adf0d3]title 
+%n`\   \
+%n  \_=_\─••• %[50][aqua]text%n%n"/>
+
+<!-- phone -->
+<format id="3" value=" %n
+__i 
+%n|---|       
+%n|[]| %app
+%n|:::|  [%t1]                   
+%n|:::| %[#adf0d3]title 
+%n`\   \
+%n  \_=_\─••• %[50][aqua]text%n%n"/>
+
+<!-- gmail -->
+<format id="4" value="┌──────────┐%n│ %t1 │  %app%n└──────────┘%n⌥▩¯╲___&#128640;$  %[100][#81c8be]title : %n%text%n──────────────────── ••••%n%n"/>
+
+<!-- zarchiver -->
+<format id="5" value="┌──────────┐%n│ %t1 │  %app%n└──────────┘%n⌥▩¯╲___&#128640;$  %[100][#81c8be]title : %n%text%n──────────────────── ••••%n%n"/>
+
+<!-- deskclock -->
+<format id="6" value="┌──────────┐%n│ %t1 │  %app%n└──────────┘%n⌥▩¯╲___&#128640;$  %[100][#81c8be]title : %n%text%n──────────────────── ••••%n%n"/>
+
+<!-- whatsapp -->
+<format id="7" value="┌──────────┐%n│ %t1 │  %app%n└──────────┘%n⌥▩¯╲___&#128640;$  %[100][#81c8be]title : %n%text%n──────────────────── ••••%n%n"/>
+
+<!-- x-plore -->
+<format id="8" value=" %n
+__i 
+%n|---|       
+%n|[_]| %app
+%n|:::|  [%t1]                   
+%n|:::| %[#adf0d3]title 
+%n`\   \
+%n  \_=_\─••• %[50][aqua]text%n%n"/>
+ 
+<filter id="1" value="null"/>
+<filter id="2" value="Unknown"/>
+</NOTIFICATIONS>

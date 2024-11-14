@@ -1,0 +1,1356 @@
+Font Awesomev.4.7.0
+  message
+☠ .2-scul 
+𓐋 haze
+ .3-glass 
+𓈌
+ .4-music 
+𓉕
+ .5-search 
+𓉖
+ .6-envelope-o 
+𓉔
+ .7-heart 
+𓉐
+ .8-star 
+𓋪
+ .9-star-o 
+
+ .10-user 
+
+ .11-film 
+
+ .12-th-large 
+
+ .13-th 
+
+ .14-th-list 
+
+ .15-check 
+
+ .16-times 
+
+ .17-search-plus 
+
+ .18-search-minus 
+
+ .19-power-off 
+
+ .20-signal 
+
+ .21-cog 
+
+ .22-trash-o 
+
+ .23-home 
+
+ .24-file-o 
+
+ .25-clock-o 
+
+ .26-road 
+
+ .27-download 
+
+ .28-arrow-circle-o-down 
+
+ .29-arrow-circle-o-up 
+
+ .30-inbox 
+
+ .31-play-circle-o 
+
+ .32-repeat 
+
+ .34-refresh 
+
+ .35-list-alt 
+
+ .36-lock 
+
+ .37-flag 
+
+ .38-headphones 
+
+ .39-volume-off 
+
+ .40-volume-down 
+
+ .41-volume-up 
+
+ .42-qrcode 
+
+ .43-barcode 
+
+ .44-tag 
+
+ .45-tags 
+
+ .46-book 
+
+ .47-bookmark 
+
+ .48-print 
+
+ .49-camera 
+
+ .50-font 
+
+ .51-bold 
+
+ .52-italic 
+
+ .53-text-height 
+
+ .54-text-width 
+
+ .55-align-left 
+
+ .56-align-center 
+
+ .57-align-right 
+
+ .58-align-justify 
+
+ .59-list 
+
+ .60-outdent 
+
+ .61-indent 
+
+ .62-video-camera 
+
+ .63-picture-o 
+
+ .64-pencil 
+
+ .65-map-marker 
+
+ .66-adjust 
+
+ .67-tint 
+
+ .68-pencil-square-o 
+
+ .69-share-square-o 
+
+ .70-check-square-o 
+
+ .71-arrows 
+
+ .72-step-backward 
+
+ .73-fast-backward 
+
+ .74-backward 
+
+ .75-play 
+
+ .76-pause 
+
+ .77-stop 
+
+ .78-forward 
+
+ .79-fast-forward 
+
+ .80-step-forward 
+
+ .81-eject 
+
+ .82-chevron-left 
+
+ .83-chevron-right 
+
+ .84-plus-circle 
+
+ .85-minus-circle 
+
+ .86-times-circle 
+
+ .87-check-circle 
+
+ .88-question-circle 
+
+ .89-info-circle 
+
+ .90-crosshairs 
+
+ .91-times-circle-o 
+
+ .92-check-circle-o 
+
+ .93-ban 
+
+ .94-arrow-left 
+
+ .95-arrow-right 
+
+ .96-arrow-up 
+
+ .97-arrow-down 
+
+ .98-share 
+
+ .99-expand 
+
+ .100-compress 
+
+ .101-plus 
+
+ .102-minus 
+
+ .103-asterisk 
+
+ .104-exclamation-circle 
+
+ .105-gift 
+
+ .106-leaf 
+
+ .107-fire 
+
+ .108-eye 
+   eye
+
+ .109-eye-slash 
+
+ .110-exclamation-triangle 
+
+ .111-plane 
+
+ .112-calendar 
+
+ .113-random 
+
+ .114-comment 
+
+ .115-magnet 
+
+ .116-chevron-up 
+
+ .117-chevron-down 
+
+ .118-retweet 
+
+ .119-shopping-cart 
+
+ .120-folder 
+
+ .121-folder-open 
+
+ .122-arrows-v 
+
+ .123-arrows-h 
+
+ .124-bar-chart 
+
+ .125-twitter-square 
+
+ .126-facebook-square 
+
+ .127-camera-retro 
+
+ .128-key 
+
+ .129-cogs 
+
+ .130-comments 
+
+ .131-thumbs-o-up 
+
+ .132-thumbs-o-down 
+
+ .133-star-half 
+
+ .134-heart-o 
+
+ .135-sign-out 
+
+ .136-linkedin-square 
+
+ .137-thumb-tack 
+
+ .138-external-link 
+
+ .139-sign-in 
+
+ .140-trophy 
+
+ .141-github-square 
+
+ .142-upload 
+
+ .143-lemon-o 
+
+ .144-phone 
+
+ .145-square-o 
+
+ .146-bookmark-o 
+
+ .147-phone-square 
+
+ .148-twitter 
+
+ .149-facebook 
+
+ .150-github 
+
+ .151-unlock 
+
+ .152-credit-card 
+
+ .153-rss 
+
+ .154-hdd-o 
+
+ .155-bullhorn 
+
+ .156-bell 
+
+ .157-certificate 
+
+ .158-hand-o-right 
+
+ .159-hand-o-left 
+
+ .160-hand-o-up 
+
+ .161-hand-o-down 
+
+ .162-arrow-circle-left 
+
+ .163-arrow-circle-right 
+
+ .164-arrow-circle-up 
+
+ .165-arrow-circle-down 
+
+ .166-globe 
+
+ .167-wrench 
+
+ .168-tasks 
+
+ .169-filter 
+
+ .170-briefcase 
+
+ .171-arrows-alt 
+
+ .172-users 
+
+ .173-link 
+
+ .174-cloud 
+
+ .175-flask 
+
+ .176-scissors 
+
+ .177-files-o 
+
+ .178-paperclip 
+
+ .179-floppy-o 
+
+ .180-square 
+
+ .181-bars 
+
+ .182-list-ul 
+
+ .183-list-ol 
+
+ .184-strikethrough 
+
+ .185-underline 
+
+ .186-table 
+
+ .187-magic 
+
+ .188-truck 
+
+ .189-pinterest 
+
+ .190-pinterest-square 
+
+ .191-google-plus-square 
+
+ .192-google-plus 
+
+ .193-money 
+
+ .194-caret-down 
+
+ .195-caret-up 
+
+ .196-caret-left 
+
+ .197-caret-right 
+
+ .198-columns 
+
+ .199-sort 
+
+ .200-sort-desc 
+
+ .201-sort-asc 
+
+ .202-envelope 
+
+ .203-linkedin 
+
+ .204-undo 
+
+ .205-gavel 
+
+ .206-tachometer 
+
+ .207-comment-o 
+
+ .208-comments-o 
+
+ .209-bolt 
+
+ .210-sitemap 
+
+ .211-umbrella 
+
+ .212-clipboard 
+
+ .213-lightbulb-o 
+
+ .214-exchange 
+
+ .215-cloud-download 
+
+ .216-cloud-upload 
+
+ .217-user-md 
+
+ .218-stethoscope 
+
+ .219-suitcase 
+
+ .220-bell-o 
+
+ .221-coffee 
+
+ .222-cutlery 
+
+ .223-file-text-o 
+
+ .224-building-o 
+
+ .225-hospital-o 
+
+ .226-ambulance 
+
+ .227-medkit 
+
+ .228-fighter-jet 
+
+ .229-beer 
+
+ .230-h-square 
+
+ .231-plus-square 
+
+ .232-angle-double-left 
+
+ .233-angle-double-right 
+
+ .234-angle-double-up 
+
+ .235-angle-double-down 
+
+ .236-angle-left 
+
+ .237-angle-right 
+
+ .238-angle-up 
+
+ .239-angle-down 
+
+ .240-desktop 
+
+ .241-laptop 
+
+ .242-tablet 
+
+ .243-mobile 
+
+ .244-circle-o 
+
+ .245-quote-left 
+
+ .246-quote-right 
+
+ .247-spinner 
+
+ .248-circle 
+
+ .249-reply 
+
+ .250-github-alt 
+
+ .251-folder-o 
+
+ .252-folder-open-o 
+
+ .253-smile-o 
+
+ .254-frown-o 
+
+ .255-meh-o 
+
+ .256-gamepad 
+
+ .257-keyboard-o 
+
+ .258-flag-o 
+
+ .259-flag-checkered 
+
+ .260-terminal 
+
+ .261-code 
+
+ .262-reply-all 
+
+ .263-star-half-o 
+
+ .264-location-arrow 
+
+ .265-crop 
+
+ .266-code-fork 
+
+ .267-chain-broken 
+
+ .268-question 
+
+ .269-info 
+
+ .270-exclamation 
+
+ .271-superscript 
+
+ .272-subscript 
+
+ .273-eraser 
+
+ .274-puzzle-piece 
+
+ .275-microphone 
+
+ .276-microphone-slash 
+
+ .277-shield 
+
+ .278-calendar-o 
+
+ .279-fire-extinguisher 
+
+ .280-rocket 
+
+ .281-maxcdn 
+
+ .282-chevron-circle-left 
+
+ .283-chevron-circle-right 
+
+ .284-chevron-circle-up 
+
+ .285-chevron-circle-down 
+
+ .286-html5 
+
+ .287-css3 
+
+ .288-anchor 
+
+ .289-unlock-alt 
+
+ .290-bullseye 
+
+ .291-ellipsis-h 
+
+ .292-ellipsis-v 
+
+ .293-rss-square 
+
+ .294-play-circle 
+
+ .295-ticket 
+
+ .296-minus-square 
+
+ .297-minus-square-o 
+
+ .298-level-up 
+
+ .299-level-down 
+
+ .300-check-square 
+
+ .301-pencil-square 
+
+ .302-external-link-square 
+
+ .303-share-square 
+
+ .304-compass 
+
+ .305-caret-square-o-down 
+
+ .306-caret-square-o-up 
+
+ .307-caret-square-o-right 
+
+ .308-eur 
+
+ .309-gbp 
+
+ .310-usd 
+
+ .311-inr 
+
+ .312-jpy 
+
+ .313-rub 
+
+ .314-krw 
+
+ .315-btc 
+
+ .316-file 
+
+ .317-file-text 
+
+ .318-sort-alpha-asc 
+
+ .319-sort-alpha-desc 
+
+ .320-sort-amount-asc 
+
+ .321-sort-amount-desc 
+
+ .322-sort-numeric-asc 
+
+ .323-sort-numeric-desc 
+
+ .324-thumbs-up 
+
+ .325-thumbs-down 
+
+ .326-youtube-square 
+
+ .327-youtube 
+
+ .328-xing 
+
+ .329-xing-square 
+
+ .330-youtube-play 
+
+ .331-dropbox 
+
+ .332-stack-overflow 
+
+ .333-instagram 
+
+ .334-flickr 
+
+ .335-adn 
+
+ .336-bitbucket 
+
+ .337-bitbucket-square 
+
+ .338-tumblr 
+
+ .339-tumblr-square 
+
+ .340-long-arrow-down 
+
+ .341-long-arrow-up 
+
+ .342-long-arrow-left 
+
+ .343-long-arrow-right 
+
+ .344-apple 
+
+ .345-windows 
+
+ .346-android 
+
+ .347-linux 
+
+ .348-dribbble 
+
+ .349-skype 
+
+ .350-foursquare 
+
+ .351-trello 
+
+ .352-female 
+
+ .353-male 
+
+ .354-gratipay 
+
+ .355-sun-o 
+
+ .356-moon-o 
+
+ .357-archive 
+
+ .358-bug 
+
+ .359-vk 
+
+ .360-weibo 
+
+ .361-renren 
+
+ .362-pagelines 
+
+ .363-stack-exchange 
+
+ .364-arrow-circle-o-right 
+
+ .365-arrow-circle-o-left 
+
+ .366-caret-square-o-left 
+
+ .367-dot-circle-o 
+
+ .368-wheelchair 
+
+ .367-vimeo-square 
+
+ .368-try 
+
+ .369-plus-square-o 
+
+ .370-space-shuttle 
+
+ .371-slack 
+
+ .372-envelope-square 
+
+ .373-wordpress 
+
+ .374-openid 
+
+ .375-university 
+
+ .376-graduation-cap 
+
+ .377-yahoo 
+
+ .378-google 
+
+ .379-reddit 
+
+ .380-reddit-square 
+
+ .381-stumbleupon-circle 
+
+ .382-stumbleupon 
+
+ .383-delicious 
+
+ .384-digg 
+
+ .385-pied-piper-pp 
+
+ .386-pied-piper-alt 
+
+ .387-drupal 
+
+ .388-joomla 
+
+ .389-language 
+
+ .390-fax 
+
+ .f391-building 
+
+ .392-child 
+
+ .393-paw 
+
+ .394-spoon 
+
+ .395-cube 
+
+ .396-cubes 
+
+ .397-behance 
+
+ .398-behance-square 
+
+ .399-steam 
+
+ .400-steam-square 
+
+ .401-recycle 
+
+ .402-car 
+
+ .403-taxi 
+
+ .404-tree 
+
+ .405-spotify 
+
+ .406-deviantart 
+
+ .407-soundcloud 
+
+ .408-database 
+
+ .409-file-pdf-o 
+
+ .410-file-word-o 
+
+ .411-file-excel-o 
+
+ .412-file-powerpoint-o 
+
+ .413-file-image-o 
+
+ .414-file-archive-o 
+
+ .415-file-audio-o 
+
+ .416-file-video-o 
+
+ .417-file-code-o 
+
+ .418-vine 
+
+ .419-codepen 
+
+ .420-jsfiddle 
+
+ .421-life-ring 
+
+ .422-circle-o-notch 
+
+ .423-rebel 
+
+ .424-empire 
+
+ .425-git-square 
+
+ .426-git 
+
+ .427-hacker-news 
+
+ .428-tencent-weibo 
+
+ .429-qq 
+
+ .430-weixin 
+
+ .431-paper-plane 
+
+ .432-paper-plane-o 
+
+ .433-history 
+
+ .434-circle-thin 
+
+ .435-header 
+
+ .436-paragraph 
+
+ .437-sliders 
+
+ .438-share-alt 
+
+ .439-share-alt-square 
+
+ .440-bomb 
+
+ .441-futbol-o 
+
+ .442-tty 
+
+ .443-binoculars 
+
+ .444-plug 
+
+ .445-slideshare 
+
+ .446-twitch 
+
+ .447-yelp 
+
+ .448-newspaper-o 
+
+ .449-wifi 
+
+ .450-calculator 
+
+ .451-paypal 
+
+ .452-google-wallet 
+
+ .453-cc-visa 
+
+ .454-cc-mastercard 
+
+ .455-cc-discover 
+
+ .456-cc-amex 
+
+ .457-cc-paypal 
+
+ .458-cc-stripe 
+
+ .459-bell-slash 
+
+ .460-bell-slash-o 
+
+ .461-trash 
+
+ .462-copyright 
+
+ .463-at 
+
+ .464-eyedropper 
+
+ .465-paint-brush 
+
+ .466-birthday-cake 
+
+ .467-area-chart 
+
+ .468-pie-chart 
+
+ .469-line-chart 
+
+ .470-lastfm 
+
+ .471-lastfm-square 
+
+ .472-toggle-off 
+
+ .473-toggle-on 
+
+ .474-bicycle 
+
+ .475-bus 
+
+ .476-ioxhost 
+
+ .477-angellist 
+
+ .478-cc 
+
+ .479-ils 
+
+ .480-meanpath 
+
+ .481-buysellads 
+
+ .482-connectdevelop 
+
+ .483-dashcube 
+
+ .484-forumbee 
+
+ .485-leanpub 
+
+ .486-sellsy 
+
+ .487-shirtsinbulk 
+
+ .488-simplybuilt 
+
+ .489-skyatlas 
+
+ .490-cart-plus 
+
+ .491-cart-arrow-down 
+
+ .492-diamond 
+
+ .493-ship 
+
+ .494-user-secret 
+
+ .495-motorcycle 
+
+ .496-street-view 
+
+ .497-heartbeat 
+
+ 498-venus 
+
+ .499-mars 
+
+ .500-mercury 
+
+ .501-transgender 
+
+ .502-transgender-alt 
+
+ .503-venus-double 
+
+ .504-mars-double 
+
+ .505-venus-mars 
+
+ .506-mars-stroke 
+
+ .507-mars-stroke-v 
+
+ .508-mars-stroke-h 
+
+ .509-neuter 
+
+ .510-genderless 
+
+ .511-facebook-official 
+
+ .512-pinterest-p 
+
+ .513-whatsapp 
+
+ .514-server 
+
+ .515-user-plus 
+
+ .516-user-times 
+
+ .517-bed 
+
+ .518-viacoin 
+
+ .519-train 
+
+ .520-subway 
+
+ .521-medium 
+
+ .522-y-combinator 
+
+ .523-optin-monster 
+
+ .524-opencart 
+
+ .525-expeditedssl 
+
+ .526-battery-full 
+
+ .527-battery-three-quarters 
+
+ .528-battery-half 
+
+ .529-battery-quarter 
+
+ .530-battery-empty 
+
+ .531-mouse-pointer 
+
+ .532-i-cursor 
+
+ .533-object-group 
+
+ .534-object-ungroup 
+
+ .535-sticky-note 
+
+ .536-sticky-note-o 
+
+ .537-cc-jcb 
+
+ .538-cc-diners-club 
+
+ .539-clone 
+
+ .540-balance-scale 
+
+ .541-hourglass-o 
+
+ .542-hourglass-start 
+
+ .543-hourglass-half 
+
+ .544-hourglass-end 
+
+ .545-hourglass 
+
+ .546-hand-rock-o 
+
+ .547-hand-paper-o 
+
+ .548-hand-scissors-o 
+
+ .549-hand-lizard-o 
+
+ .550-hand-spock-o 
+
+ .551-hand-pointer-o 
+
+ .552-hand-peace-o 
+
+ .553-trademark 
+
+ .554-registered 
+
+ .555-creative-commons 
+
+ .556-gg 
+
+ .557-gg-circle 
+
+ .558-tripadvisor 
+
+ .559-odnoklassniki 
+
+ .560-odnoklassniki-square 
+
+ .561-get-pocket 
+
+ .562-wikipedia-w 
+
+ .563-safari 
+
+ .564-chrome 
+
+ .565-firefox 
+
+ .566-opera 
+
+ .567-internet-explorer 
+
+ .568-television 
+
+ .569-contao 
+
+ .570-500px 
+
+ .571-amazon 
+
+ .572-calendar-plus-o 
+
+ .573-calendar-minus-o 
+
+ .574-calendar-times-o 
+
+ .575-calendar-check-o 
+
+ .576-industry 
+
+ .577-map-pin 
+
+ .578-map-signs 
+
+ .579-map-o 
+
+ .580-map 
+
+ .581-commenting 
+
+ .582-commenting-o 
+
+ .583-houzz 
+
+ .584-vimeo 
+
+ .585-black-tie 
+
+ .586-fonticons 
+
+ .587-reddit-alien 
+
+ .588-edge 
+
+ .589-credit-card-alt 
+
+ .590-codiepie 
+
+ .591-modx 
+
+ .592-fort-awesome 
+
+ .593-usb 
+
+ .594-product-hunt 
+
+ .595-mixcloud 
+
+ .596-scribd 
+
+ .597-pause-circle 
+
+ .598-pause-circle-o 
+
+ .599-stop-circle 
+
+ .600-stop-circle-o 
+
+ .601-shopping-bag 
+
+ .602-shopping-basket 
+
+ .603-hashtag 
+
+ .604-bluetooth 
+
+ .605-bluetooth-b 
+
+ .606-percent 
+
+ .607-gitlab 
+
+ .608-wpbeginner 
+
+ .609-wpforms 
+
+ .610-envira 
+
+ .611-universal-access 
+
+ .612-wheelchair-alt 
+
+ .613-question-circle-o 
+
+ .614-blind 
+
+ .615-audio-description 
+
+ .616-volume-control-phone 
+
+ .617-braille 
+
+ .618-assistive-listening-systems 
+
+ .619-american-sign-language-interpreting 
+
+ .620-deaf 
+
+ .621-glide 
+
+ .622-glide-g 
+
+ .623-sign-language 
+
+ .624-low-vision 
+
+ .625-viadeo 
+
+ .626-viadeo-square 
+
+ .627-snapchat 
+
+ .628-snapchat-ghost 
+
+ .629-snapchat-square 
+
+ .630-pied-piper 
+
+ .631-first-order 
+
+ .632-yoast 
+
+ .633-themeisle 
+
+ .634-google-plus-official 
+
+ .635-font-awesome 
+
+ .636-handshake-o 
+
+ .637-envelope-open 
+
+ .638-envelope-open-o 
+
+ .639-linode 
+
+ .640-address-book 
+
+ .641a-address-book-o 
+
+ .642-address-card 
+
+ .643-address-card-o 
+
+ .644-user-circle 
+
+ .645-user-circle-o 
+
+ .646-user-o 
+
+ .647-id-badge 
+
+ .648-id-card 
+
+ .649-id-card-o 
+
+ .650-quora 
+
+ .651-free-code-camp 
+
+ .652-telegram 
+
+ .653-thermometer-full 
+
+ .654-thermometer-three-quarters 
+
+ .656-thermometer-half 
+
+ .657-thermometer-quarter 
+
+ .658-thermometer-empty 
+
+ .659-shower 
+
+ .660-bath 
+
+ .661-podcast 
+
+ .662-window-maximize 
+
+ .663-window-minimize 
+
+ .664-window-restore 
+
+ .665-window-close 
+
+ .666-window-close-o 
+
+ .667-bandcamp 
+
+ .668-grav 
+
+ .669-etsy 
+
+ .670-imdb 
+
+ .671-ravelry 
+
+ .672-eercast 
+
+ .673-microchip 
+
+ .674-snowflake-o 
+
+ .675-superpowers 
+
+ .676-wpexplorer 
+
+ .677-meetup 
+
+all hail king dino

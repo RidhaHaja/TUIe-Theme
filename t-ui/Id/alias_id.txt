@@ -1,0 +1,16 @@
+[ Info_Sistem]=clear;tui -about;sh t-ui/AddOn/infoHP_id -id
+
+[ Bahasa]=cp -f /sdcard/t-ui/En/behavior_en.xml /sdcard/t-ui/behavior.xml;cp -f /sdcard/t-ui/En/alias_en.txt /sdcard/t-ui/alias.txt;restart
+
+<!--warna dan tema-->
+[ Tema(1-3)]:=cp -f /sdcard/t-ui/color/w-0%.xml /sdcard/t-ui/theme.xml;echo 'Tema sudah di pasang, restart t-uie untuk menerapkan perubahan';input text 'restart'
+[ Banner(a-e)]=config -set custom_command sh /sdcard/t-ui/AddOn/ascii/ASCIIart -%
+<!--warna dan tema-->
+
+[ CLS]=clear
+[ RST]=restart
+[🔦 Senter]=flash
+[ Lokasi_Cuaca]=config -set weather_location %
+[ Voc]=search -u http://learnersdictionary.com/definition/%
+[ Alias]=alias ls
+[Icons]=cat t-ui/icons.txt

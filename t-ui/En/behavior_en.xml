@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BEHAVIOR>
+<double_tap_lock value="true"/>
+<!--(true/false) Jika true, t-ui akan mengunci layar dengan mengetuk dua kali-->
+
+<double_tap_cmd value="status;sh t-ui/AddOn/asciibot/asciibot.sh"/>
+<!--Perintah yang akan dijalankan ketika Anda menyentuh layar dua kali dengan cepat-->
+
+<random_play value="true"/>
+<!--	(true/false) Jika true, pemutar musik akan memutar lagu Anda secara acak-->
+
+<songs_folder value="/storage/emulated/0/Music"/>
+<!--Folder yang berisi file musik Anda-->
+
+<songs_from_mediastore value="true"/>
+<!-- (true/false) Jika true, t-ui akan mendapatkan trek dari media penyimpan sistem-->
+
+<tui_notification value="false"/>
+<!-- (true/false) jika true, akan selalu ada notifikasi di status bar, memberitahukan bahwa t-ui sedang berjalan-->
+
+<auto_show_keyboard value="false"/>
+<!-- (true/false) Jika true, keyboard Anda akan ditampilkan setiap kali Anda kembali ke t-ui-->
+
+<auto_scroll value="true"/>
+<!-- (true/false) Jika true, terminal akan otomatis digulir ke bawah saat keyboard terbuka-->
+
+<show_hints value="true"/>
+<!-- (true/false) Jika true, t-ui akan memberi Anda beberapa petunjuk berguna suatu saat nanti-->
+
+<show_alias_content value="false"/>
+<!-- (true/false) Jika true, saat Anda menggunakan alias Anda juga akan dapat mengetahui perintah apa yang telah dijalankan-->
+
+<show_launch_history value="true"/>
+<!--(true/false) Jika false, t-ui tidak akan menampilkan aplikasi yang Anda luncurkan-->
+
+<clear_after_seconds value="-1"/>
+<!--Hapus otomatis setelah n detik (jika -1, fitur ini akan dinonaktifkan)-->
+
+<max_lines value="-1"/>
+<!--Tetapkan jumlah baris maksimum yang akan ditampilkan di terminal (jika -1, fitur ini dinonaktifkan)-->
+
+<time_format value="dd MMM hh:mm:ss a @HH:mm:ss"/>
+<!--Tentukan format waktu (lihat juga Format Waktu)-->
+
+<time_format_separator value="@"/>
+<!--Ini adalah pemisah antara format waktu yang berbeda-->
+
+<battery_medium value="50"/>
+<!--Persentase di bawah level baterai yang akan dianggap "sedang" -->
+
+<battery_low value="15"/>
+<!--Persentase di bawah level baterai yang akan dianggap "rendah"-->
+
+<device_format value="%d: %u"/>
+<!--Tentukan format perangkat 
+Nama perangkat ->
+ %d
+Nama pengguna ->
+ %u
+Baris baru ->
+ %n -->
+
+<ram_format value="﬙ %avgbGB/%totgbGB"/>
+<!-- format RAM 
+RAM tersedia ->
+ %av
+total RAM ->
+ %tot
+Baris baru ->
+ %n -->
+
+<battery_format value="%(/) %v%"/>
+<!--persentasi Baterai : %v
+Baris baru ->
+ %n
+Pengisian daya: % (mengisi/tidak mengisi)
+-->
+
+<storage_format value="   %iavgbGB/%itotgbGB  "/>
+<!--penyimpanan internal yang tersedia ->
+ %iav
+total penyimpanan internal ->
+ %itot
+penyimpanan eksternal yang tersedia ->
+ %eav
+total penyimpanan eksternal ->
+ %etot
+baris baru ->
+ %n
+-->
+
+<network_info_format value="%( / )  %[ / ]  %{ / }   "/>
+<!--%w0 ->
+ "1" jika WiFi aktif, "0" jika tidak
+%w1 ->
+ "aktif" jika WiFi aktif, "mati" jika tidak
+%w2 ->
+ "ON" jika WiFi aktif, "OFF" jika tidak
+%w3 ->
+ "benar" jika WiFi aktif, "salah" jika tidak
+%w4 ->
+ "TRUE" jika WiFi aktif, "FALSE" jika tidak
+%wn ->
+ nama jaringan
+%ip4 ->
+ ipv4 Anda
+%ip6 ->
+ ipv6 Anda
+%d0 ->
+ "1" jika data seluler aktif, "0" jika tidak
+%d1 ->
+ "aktif" jika data seluler aktif, "mati" jika tidak
+%d2 ->
+ "ON" jika data seluler aktif, "OFF" jika tidak
+%d3 ->
+ "benar" jika data seluler aktif, "salah" jika tidak
+%d4 ->
+ "TRUE" jika data seluler aktif, "FALSE" jika tidak
+%dt ->
+ jenis jaringan seluler, "4g", "3g", ...
+%b0 ->
+ "1" jika bluetooth aktif, "0" jika tidak
+%b1 ->
+ "aktif" jika bluetooth aktif, "mati" jika tidak
+%b2 ->
+ "ON" jika bluetooth aktif, "OFF" jika tidak
+%b3 ->
+ "benar" jika bluetooth aktif, "salah" jika tidak
+%b4 ->
+ "TRUE" jika bluetooth aktif, "FALSE" jika tidak
+%n ->
+ baris baru
+Nilai jaringan opsional
+WiFi: %(teks aktif/teks nonaktif)
+Data seluler: %[teks aktif/teks nonaktif]
+Bluetooth: %{teks aktif/teks nonaktif}
+-->
+<input_format value="┌──────────┐%n│ %t1 │ %p Running ...                                                            └──────────┘    %i"/>
+
+<!--input_format value="⌬══⌥▩[%t1] [◉'] %i..."/-->
+<!--teks masukan: %i
+awalan: %p
+waktu/tanggal: %t (periksa format_waktu)
+baris baru: %n
+-->
+
+<output_format value="%o"/>
+<!--teks keluaran: %o
+baris baru: %n
+-->
+
+<session_info_format value="%u %d:%p"/>
+<!--nama pengguna: %u
+perangkat: %d
+jalur: %p -->
+
+<enable_app_launch value="true"/>
+<!--(true/false) Jika false, Anda tidak akan dapat meluncurkan aplikasi dari t-ui, kecuali Anda menggunakan "apps -frc"-->
+
+<app_launch_format value="⌥▩¯╲___&#55357;&#56960; %a%n──────────────────── ••••%n%n⌥▩ Program succeded%n⌥▩ User verification .......... finished%n⌥▩ Password analysis .......... finished %n%n⌥▩¯╲___ Enter next command ...%n"/>
+<!--Tentukan format peluncuran aplikasi
+nama aktivitas: %a
+nama paket: %p
+nama aplikasi: %l
+waktu/tanggal: %t
+baris baru: %n
+-->
+
+<alias_param_marker value="%"/>
+<alias_param_separator value=","/>
+<alias_replace_all_markers value="true"/>
+<multiple_cmd_separator value=";"/>
+<!-- txt pada dua perintah -->
+
+<alias_content_format value="%a --&gt; [%v]"/>
+<external_storage_path value=""/>
+<home_path value="/storage/emulated/0"/>
+<!-- rumah di penyimpanan "/storage/emulated/0" -->
+
+<app_installed_format value="┌──────────┐%n│    Install %l                                                           └──────────┘%n⌥▩¯╲___ %p %n──────────────────── ••••%n⌥▩ Proceed with installation? [Y/n]%n⌥▩ checking package      .......... Done%n⌥▩ checking available disk space .. Done%n⌥▩ loading package files .......... Done%n⌥▩ installing package    .......... Done%n%n⌥▩¯╲___ Enter next command ...%n%n"/>
+
+<app_uninstalled_format value="┌──────────┐%n│  uninstall %l                                                           └──────────┘%n⌥▩¯╲___ %p %n──────────────────── ••••%n⌥▩ Proceed with uninstallation? [Y/n]%n⌥▩ checking package       .......... Done%n⌥▩ deleting package files .......... Done%n%n⌥▩¯╲___ Enter next command ...%n%n"/>
+
+<enable_music value="true"/>
+<max_optional_depth value="2"/>
+<network_info_update_ms value="3500"/>
+<tui_notification_title value="T-UI"/>
+<tui_notification_subtitle value="T-UI is running"/>
+<tui_notification_click_cmd value=""/>
+<tui_notification_click_showhome value="true"/>
+<tui_notification_lastcmds_size value="5"/>
+<tui_notification_lastcmds_updown value="true"/>
+<tui_notification_priority value="0"/>
+<long_click_vibration_duration value="100"/>
+<long_click_duration value="700"/>
+<click_commands value="true"/>
+<long_click_commands value="true"/>
+<append_quote_before_file value="false"/>
+<optional_values_separator value="/"/>
+<notes_sorting value="0"/>
+<!-- 0 = waktu habis->
+ turun; 1 = waktu habis->
+ ke atas; 2 = abjad atas->
+ turun; 3 = abjad bawah->
+ ke atas; 4 = terkunci sebelumnya; 5 = tidak terkunci sebelumnya -->
+
+<notes_allow_link value="true"/>
+ 
+<!-- (true/false) Jika false, menambahkan tautan ke catatan tidak akan diizinkan (mungkin sedikit meningkatkan kinerja) -->
+
+<orientation value="2"/>
+<!-- 0 = lanskap, 1 = potret, 2 = putar otomatis -->
+
+<htmlextractor_default_format value="%t -&gt; %v%n%a(%an = %av)(%n)"/>
+<htmlextractor_notfound_message value="Tidak ditemukan"/>
+<!-- Pesan dicetak ketika tidak ada hasil di dalam kueri ekstrak html Anda -->
+
+<tui_notification_time_color value="#03A9F4"/>
+<!-- Warna waktu di dalam notifikasi t-ui -->
+
+<tui_notification_input_color value="#ff00ff00"/>
+<!-- Warna input di dalam notifikasi t-ui -->
+
+<weather_key value="1f798f99228596c20ccfda51b9771a86"/>
+<!-- Kunci akun Anda di OpenWeatherMap. Anda dapat mempertahankan yang default, atau membuat kunci khusus Anda (periksa wiki) -->
+
+<weather_temperature_measure value="metric"/>
+<!-- metrik = Celsius; imperial = Fahrenheit; standar = Kelvin -->
+
+<weather_location value="-3.402121,114.653471"/>
+<!-- ID negara Anda (periksa wiki) atau koordinat Anda dipisahkan dengan koma (lat,lon) -->
+
+<weather_format value=" %name •  [%lon, %lat] • #[Thunderstorm/ ][Drizzle/ ][Rain/ ][Snow/ﰕ ][Mist/ ][Smoke/ ][Haze/ ][Dust/ ][Fog/ [Sand/ ][Ash/ ][Squall/ ][Tornado/ ][Clear/ ][Clouds/ ]%main %description •  %temp°C •  %pressure hPa •  %humidity% •   %visibility$(/1000) km • 龍   %speed$(*3.6) km/h"/>
+
+<clear_on_lock value="false"/>
+<!-- Jika benar, t-ui akan menghapus layar saat Anda mengunci ponsel -->
+
+<unlock_counter_format value="Unlocked %c times (%a10/)%n%t(Unlock n. %i --&gt; %w)3"/>
+<!-- Format yang digunakan untuk menampilkan penghitung buka kunci -->
+
+<unlock_time_divider value="%n"/>
+<!-- Pembatas antara waktu buka kunci terakhir -->
+
+<unlock_time_order value="1"/>
+<!-- 1 = atas-bawah. 2 = turun ke atas -->
+
+<unlock_counter_cycle_start value="6.00"/>
+<!-- Jam awal siklus penghitung buka kunci (hh.mm) -->
+
+<not_available_text value="n/a"/>
+<!-- Teks yang ditampilkan ketika suatu nilai tidak tersedia -->
+
+<back_button_enabled value="true"/>
+<!-- (true/false) Jika true, tombol kembali akan menempatkan perintah sebelumnya di dalam area input -->
+
+<weather_update_time value="3600"/>
+<!-- Waktu pembaruan cuaca dalam hitungan detik. Ini hanya dapat digunakan jika Anda menggunakan kunci cuaca khusus -->
+
+<location_update_mintime value="20"/>
+<!-- Jumlah waktu antara dua pembaruan lokasi (dalam menit, harus berupa nilai integer) -->
+
+<location_update_mindistance value="500"/>
+<!-- Jarak minimum (dalam meter) untuk mendapatkan pembaruan lokasi -->
+
+<show_weather_updates value="true"/>
+<!-- (true/false) Jika false, t-ui tidak akan menampilkan informasi tentang cuaca di kolom keluaran -->
+<clear_after_cmds value="-1"/>
+</BEHAVIOR>

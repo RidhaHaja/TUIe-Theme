@@ -1,0 +1,473 @@
+#!/system/bin/sh
+
+#infoHp - Informasi sistem dengan ascii
+#kamis-04 04 2024
+#for T-UI on android
+#by RidaHaja - AmaN
+#Requires nerdfonts
+
+### icon ###
+i_Phone=$(echo $'\uf42c')
+i_C=$(echo $'\uf121')
+i_OS=$(echo $'\uE70e')
+i_SecurityPatch=$(echo $'\uf982')
+i_SELinux=$(echo $'\uf923')
+i_CPU=$(echo $'\uF986')
+i_Memory=$(echo $'\ufb19')
+i_zRAM=$(echo $'\uF9a6')
+i_STORAGE=$(echo $'\uf7c9')
+i_Kernel=$(echo $'\')
+i_Uptime=$(echo $'\uf55c')
+i_Airplane=$(echo $'\')
+i_Wifi=$(echo $'\')
+i_Loc=$(echo $'\uf84f')
+i_ip=$(echo $'\uf2ce')
+i_Net=$(echo $'\uf015')
+i_PAKET=$(echo $'\uf487')
+i_time=$(echo $'\uf64f')
+i_term=$(echo $'\uf68c')
+i_Batt=$(echo $'\uf58d')
+i_Bell=$(echo $'\u23f1')
+i_0=$(echo $'|')
+i_01=$(echo $'\u23fb') #⏻
+i_02=$(echo $'\u251c') #├
+i_03=$(echo $'\uf66b') #
+i_user=$(echo $'\uf2bd')
+i_user1=$(echo $'\ufbc9')
+i_HName=$(echo $'\uf2c2')
+i_fPrint=$(echo $'\uf736')
+i_bluetooth=$(echo $'\uf293')
+i_Bumi=$(echo $'\uf484')
+i_DPlay=$(echo $'\uf108')
+i_Kunci=$(echo $'\uf23e')
+i=$(echo $'id-ID')
+i_usb=$(echo $'\uf287')
+_s1='┌'
+_p2='┘'
+_s2='└'
+_p1='┐'
+
+### definisi ###
+DATE=`date`
+APPNAME=${0##*/}
+USER=${USER:-$(id -un || printf %s "${HOME/*\/}")}
+TYPE=`getprop ro.fota.type`
+VERSION=`getprop ro.build.fota.version`
+VERSION_1=`getprop ro.fota.version`
+LOGO="$(dirname $0)/ascii/Logo.txt"
+BRAND=`getprop ro.product.brand`
+BRAND1=`getprop Build.BRAND` 
+MODEL=`getprop ro.product.model`
+VERSION_CODENAME=`getprop ro.build.version.codename`
+MANUFACTURER=`getprop ro.product.manufacturer`
+PRODUCT_NAME=`getprop ro.product.name`
+DEVICE=`getprop persist.sys.devicename`
+PLATFORM=`getprop ro.fota.platform`
+PLATFORM_1=`getprop ro.board.platform`
+HARDWARE=`getprop ro.hardware`
+HARDWARE_1=`getprop ro.product.hardware`
+#HARDWARE=$(cat /proc/cpuinfo | grep 'Hardware' | awk '{print $3,$6}')
+HARDWARE_EGL=`getprop ro.hardware.egl`
+CHIPID=`getprop persist.vendor.connsys.fm_chipid`
+BOARD=`getprop ro.product.board`
+CPU_ABI=`getprop ro.product.cpu.abi`
+CPU_ABILIST=`getprop ro.product.cpu.abilist32`
+USB_TYPE=`getprop ro.sys.usb.storage.type`
+USB_CONTROLLER=`getprop sys.usb.controller`
+USB_CHARGING=`getprop ro.sys.usb.charging.only`
+ARM_V=`getprop dalvik.vm.isa.arm.variant`
+ANDROID_VERSION=`getprop ro.build.version.release`
+BUILDID=`getprop ro.build.id`
+BUILDDATE=`getprop ro.build.date`
+GENCFG=`getprop ro.vendor.md_apps.load_gencfg`
+MD_APPS=`getprop ro.vendor.md_apps.load_verno`
+VersionSDK=`getprop ro.build.version.sdk`
+MIN_TARGET_SDK=`getprop ro.build.version.min_supported_target_sdk`
+MIN_TARGET_SDK_1=`getprop ro.product.minmatch`
+VERSION_INCREMENTAL=`getprop ro.build.version.incremental`
+BOOTLOADER=`getprop ro.bootloader`
+ROOTed=`getprop ro.build.system_root_image`
+BUILDTAG=`getprop ro.build.tags`
+BUILDTYPE=`getprop ro.build.type`
+BUILDUSER=`getprop ro.build.user`
+FLAVOR=`getprop ro.build.flavor`
+HOST=`getprop ro.build.host`
+LLANGUAGE=`getprop persist.sys.locale`
+TIMEZONE=`getprop persist.sys.timezone`
+TOYBOX=$(toybox --version || busybox | head -1)
+ $(toybox --version) >/dev/null 2>&1 [ $? -eq 0 ] && id_ToyBox="          busybox" || id_ToyBox="           ToyBox"
+FINGERPRINT=`getprop ro.build.fingerprint`
+DISPLAY_ID=`getprop ro.build.display.id`
+DISPLAY_L=`getprop ro.sf.lcd_density`
+PATCH=`getprop ro.build.version.security_patch`
+DATA_ENCRYPTION=`getprop ro.crypto.state`
+TYPE_ENCRYPTION=`getprop ro.crypto.type`
+NAME_ENCRYPTION=`getprop ro.crypto.volume.filenames_mode`
+CPUCORE=`grep -c "^processor" /proc/cpuinfo`
+#CPUCORE=`nproc`
+CPUFREQ=`< /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq`
+DISK=`df -h | awk '$NF=="/storage/emulated"{printf "%g %d/%dGB (%s) on %s\n",$3,$4,$2,$5,$6}'||df -h /storage/emulated | tail -1`
+##DISK="$(df -h /data/media | tail -1 | awk '{print $3 " " $4 "/" $2 " (" $5 ") on " $6}'||df -h /storage/emulated | tail -1)"
+BATTERY=`getprop ro.odm.battery_capacity`
+KERNEL_V=`uname -srm | tr '[:upper:]' '[:lower:]'`
+KERNEL_R=`uname -v`
+IMEI1=$(getprop gsm.mtk.imei1)
+IMEI2=`getprop gsm.mtk.imei2`
+IMEI_1=$(getprop persist.radio.device.imei)
+IMEI_2=`getprop persist.radio.device.imei2`
+SUPTIME=`uptime -s`
+UPTIME=`uptime -p | sed "s/ 0 [^ ]*,//g" | sed "s/up //"`
+#UPTIME="$(echo $(uptime -p) | cut -c 4-)"
+SMARTKEY_DC=`getprop ro.odm.smart_link_key_dc`
+SMARTKEY_LP=`getprop ro.odm.smart_link_key_lp`
+SMARTKEY_SC=`getprop ro.odm.smart_link_key_sc`
+NOTIFICATION_SOUND=$(getprop ro.config.notification_sound)
+ALARM_ALERT=$(getprop ro.config.alarm_alert)
+RINGTONE=$(getprop ro.config.ringtone)
+GSMBaseband=$(getprop vendor.gsm.project.baseband)
+GSMBaseband_1=$(getprop gsm.version.baseband)
+GSMstat=`getprop gsm.sim.state`
+SIMOperator=`getprop gsm.sim.operator.alpha`
+SIMvendor=`getprop persist.radio.nitz_oper_sname`
+SIMvendor_1=`getprop persist.vendor.radio.nitz_oper_sname`
+SIM_Country=`getprop gsm.sim.operator.iso-country`
+AIRPLANE=`getprop persist.vendor.radio.airplane.mode.on`
+NETWORK=`getprop gsm.network.type`
+HOSTNAME=`hostname -s||getprop net.hostname`
+HomePage=`getprop ro.odm.browser_homepage`
+WIFI=`getprop wifi.interface`
+WIFI_CHANNELS=`getprop ro.wifi.channels`
+  
+# Get total memory
+  ##RAM_T=`grep MemTotal /proc/meminfo | awk '{ printf "%.2f", ($2/1024)/1024}'`
+# Get free memory
+  ##RAM_F=`grep MemFree /proc/meminfo | awk '{ printf "%.2f", ($2/1024)/1024}'`
+# Get available memory
+  ##RAM_A=`grep MemAvail /proc/meminfo | awk '{ printf "%.2f", ($2/1024)/1024}'`
+# Calculate used memory
+  ##used_memory=$((((`grep MemTotal /proc/meminfo | awk '{ printf $2}'` - `grep MemAvail /proc/meminfo | awk '{ printf $2}'`)/1024)/1024))
+# Calculate memory usage percentage
+  ##memory_usage=$(awk "BEGIN {printf \"%.2f\", ((used_memory*100)/RAM_T)))
+  
+  ##RAM=$(egrep "MemTotal|MemFree|MemAvailable" /proc/meminfo |awk '{print ($2/1024)/1024 "Gb"}')
+
+  #ZRAM=`grep SwapTotal /proc/meminfo | awk '{ printf "%.2f", ($2/1024)}'`
+  #ZRAM=`free -h | awk '/^Swap:/{printf "%g %s/%gGB\n", $4,$3,$2}'`
+  #ZRAM_100=`free | awk '/^Swap:/{printf "(%.0f%%)",$4*100/$2}'`
+  
+###  Bahasa  ###
+Bahasa (){
+        id_="MENGUMPULKAN INFORMASI, TUNGGU SEBENTAR..."
+        id_1="Informasi Sistem   "
+        id_by="Bahasa Indonesia: RidaHaja - AmaN"
+        id_Brand="          Merek"
+        id_Model="          Model" 
+        id_Manufacturer="       Pabrikan"
+        id_ProductName="    Nama Produk"
+        id_Device=" Nama Perangkat"
+        id_Platform="       Platform"
+        id_Hardware="Perangkat keras"
+        id_fm_chipid="      fm_chipid"
+        id_Product2board="  Papan Sirkuit"
+        id_Architect="        Arsitek"
+        id_Supported="       Didukung"
+        id_USBtype="       Tipe USB"
+        id_USBController=" Pengontrol USB"
+        id_USBCharging=" USB Mengisi daya"
+        id_armvariant="      arm.variant"
+        id_OSversion="    Versi SO"
+        id_BuildDate="      Pembuatan"
+        id_Gencfg="           Gencfg"
+        id_SDK="        Versi SDK"
+        id_VerIncremental="   Versi Tambahan"
+        id_BootLoader="    Boot Loader"
+        id_Root="           Root"
+        id_BuildTag="        Build Tag"
+        id_BuildType="       Build Type"
+        id_User="           User"
+        id_Host="             Host"
+        id_Language="           Bahasa"
+        id_TimeZone="     Zona Waktu"
+        id_TimeFormat="   Format Waktu"
+        #id_ToyBox="           ToyBox"
+        id_Fingerprint="     Sidik Jari"
+        id_DisplayId="    ID Tampilan"
+        id_ScreenDensity="  Kepadatan Layar" 
+        id_SecurityPatch=" Patch Keamanan"
+        id_dataStatus="     /Status data"
+        id_SElinux="        SElinux"
+        id_CPU="            CPU"
+        id_Memory="         Memori"
+        id_SwapMemory="    Memori Swap"
+        id_Storage="    Penyimpanan"
+        id_Battery="        Baterai"
+        id_Kernel="         Kernel"
+        id_IMEI1="           IMEI 1"
+        id_IMEi2="           IMEi 2"
+        id_BootSystem="    Sistem Boot"
+        id_UpTime="    Waktu Aktif"
+        id_smartkeydc=" Tombol Pintar dc"
+        id_smartkeylp=" Tombol Pintar lp"
+        id_smartkeysc=" Tombol Pintar sc"
+        id_NotificationSound=" Notifikasi Suara"
+        id_Alarm="          Alarm"
+        id_Ringtone="      Nada dering" 
+        id_GSMBaseband="   Pita Basis GSM"
+        id_GSMOperator="     Operator GSM"
+        id_GSMstat="       Status GSM"
+        id_SIMOperator="     Operator SIM"
+        id_SIMvendor="       Vendor SIM" 
+        id_Offline="   Mode Pesawat"
+        id_Network="   Jenis Jaringan"
+        id_Hostname="       HostName"
+        id_HomePage="       HomePage"
+        id_Wifi="           Wifi"
+
+        aktif="aktif"
+        nonaktif="nonaktif"
+        id_koneksi="      Koneksi"
+        YouAreUp=" Baik  :)"
+        YourAreDown=" Turun  :("
+        IPackage="Paket Terpasang"
+}
+  
+English (){
+        id_="Collecting information, Please wait..."
+        id_1="system information "
+        id_by="English by Archit                "
+        id_Brand="          Brand"
+        id_Model="          Model" 
+        id_Manufacturer="   Manufacturer"
+        id_ProductName="   Product Name"
+        id_Device="    Device Name"
+        id_Platform="       Platform"
+        id_Hardware="       Hardware"
+        id_fm_chipid="      fm_chipid"
+        id_Product2board="          board"
+        id_Architect="      Architect"
+        id_Supported="      Supported"
+        id_USBtype="       USB type"
+        id_USBController=" USB controller"
+        id_USBCharging="USB Charging only"
+        id_armvariant="      arm.variant"
+        id_OSversion="  OS version"
+        id_BuildDate="     Build Date"
+        id_Gencfg="           Gencfg"
+        id_SDK="      SDK Version"
+        id_VerIncremental="      Add Version"
+        id_BootLoader="    Boot Loader"
+        id_Root="           Root"
+        id_BuildTag="        Build Tag"
+        id_BuildType="       Build Type"
+        id_User="           User"
+        id_Host="             Host"
+        id_Language="         Language"
+        id_TimeZone="      Time Zone"
+        id_TimeFormat="    Time Format"
+        #id_ToyBox="           ToyBox"
+        id_Fingerprint="    Fingerprint"
+        id_DisplayId="     Display Id"
+        id_ScreenDensity="   Screen Density" 
+        id_SecurityPatch="Security Patchs"
+        id_dataStatus="     /data Status"
+        id_SElinux="        SElinux"
+        id_CPU="            CPU"
+        id_Memory="         Memory"
+        id_SwapMemory="    Swap Memory"
+        id_Storage="        Hardisk"
+        id_Battery="        Battery"
+        id_Kernel="         Kernel"
+        id_IMEI1="           IMEI 1"
+        id_IMEi2="           IMEi 2"
+        id_BootSystem="    Boot System"
+        id_UpTime="         UpTime"
+        id_smartkeydc="smart link key dc"
+        id_smartkeylp="smart link key lp"
+        id_smartkeysc="smart link key sc"
+        id_NotificationSound="      Notif sound"
+        id_Alarm="          Alarm"
+        id_Ringtone="         Ringtone" 
+        id_GSMBaseband="     GSM Baseband"
+        id_GSMstat="       GSM Status"
+        id_SIMOperator="     SIM Operator"
+        id_SIMvendor="       SIM Vendor" 
+        id_Offline="  Airplane mode"
+        id_Network="     Network type"
+        id_Hostname="      Host Name"
+        id_HomePage="       HomePage"
+        id_Wifi="           Wifi"
+
+        aktif="Permissive"
+        nonaktif="Enforcing"
+        id_koneksi="       Connection"
+        YouAreUp=" You are Up :)"
+        YourAreDown=" Your Are Down :("        
+        IPackage="Installed Packages"
+}
+
+  
+##########
+LoGo_pc () {
+
+printf "%s\n"\
+        "$_s1---─────────────────────────────────────---•••$_p1"\
+        "|        ─────  ─  ─ ─  ─────       '::::%%%%%H|"\
+        "|          # ── #  # # #──             ':::%%%%|"\
+        "|          ─     ──  ─  ────              ':::%|"\
+        "|   /  _  \  $DATE     |"\
+        "|  |-=(_)=-|                                   |"\
+        "|:. \     /   $APPNAME - $id_1 |"\
+        "|%:::..           $(dirname "$0")                   |"\
+        "|%%%%:::..  $id_by |"\
+        "$_s2•••---─────────────────────────────────────---$_p2"\
+        "  "
+sleep 5 & PID=$! #simulate a long process
+
+echo "\n$id_"
+printf "["
+# While process is running...
+while kill -0 $PID 2> /dev/null; do
+    printf  "▓"
+    sleep 0.5
+done
+printf "]"
+echo "\n"
+
+# Print ascii art logo
+   cat "$LOGO"
+  echo ""
+}
+
+print_id () {
+  
+LoGo_pc
+    # Status SELinux tanpa akses root
+  cat /sys/fs/selinux/enforce >/dev/null 2>&1
+[ $? -eq 0 ] && SELINUX="$aktif" || SELINUX="$nonaktif"
+
+  ping -q -c2 google.com &>/dev/null && N="$YouAreUp"|| N="$YourAreDown"
+
+# Print semua informasi
+    padding=10
+    printf "%${padding}s | %s\n"\
+        "$_s1   $TYPE $i_Phone" "$VERSION$VERSION_1"\
+        "$i_0 $id_Brand $i_C" "$BRAND - $BRAND1"\
+        "$i_0 $id_Model $i_C" "$MODEL - $VERSION_CODENAME"\
+        "$i_0 $id_Manufacturer $i_C" "$MANUFACTURER"\
+        "$i_0 $id_ProductName $i_C" "$PRODUCT_NAME"\
+        "$i_0 $id_Device $i_C" "$DEVICE"\
+        "$i_0 $id_Platform $i_C" "$PLATFORM $PLATFORM_1"\
+        "$i_0 $id_Hardware $i_C" "$HARDWARE - $HARDWARE_EGL$HARDWARE_1"\
+        "$i_0 $id_fm_chipid $i_C" "$CHIPID"\
+        "$i_0 $id_Product2board $i_C" "$BOARD"\
+        "$i_0 $id_Architect $i_C" "$CPU_ABI"\
+        "$i_0 $id_Supported $i_C" "$CPU_ABILIST"\
+        "$i_0 $id_USBtype $i_usb" "$USB_TYPE"\
+        "$i_0 $id_USBController $i_usb" "$USB_CONTROLLER"\
+        "$i_0 $id_USBCharging" "$USB_CHARGING"\
+        "$i_0 $id_armvariant" "$ARM_V"\
+        "$i_02--- $id_OSversion $i_OS" "Android $ANDROID_VERSION ($BUILDID)"\
+        "$i_0 $id_BuildDate $i_time" "$BUILDDATE"\
+        "$i_0 $id_Gencfg" "$GENCFG"\
+        "$i_0 $id_SDK" "$VersionSDK (Minimal Target $MIN_TARGET_SDK$MIN_TARGET_SDK_1)"\
+        "$i_0 $id_VerIncremental" "$VERSION_INCREMENTAL"\
+        "$i_0 $id_BootLoader $i_term" "$BOOTLOADER"\
+        "$i_0 $id_Root $i_term" "$ROOTed"\
+        "$i_0 $id_BuildTag" "$BUILDTAG"\
+        "$i_0 $id_BuildType" "$BUILDTYPE"\
+        "$i_0 $id_User $i_user" "$BUILDUSER"\
+        "$i_0            Flavor" "$FLAVOR"\
+        "$i_0 $id_Host" "$HOST"\
+        "$i_0 $id_Language" "$LLANGUAGE"\
+        "$i_0 $id_TimeZone $i_Bumi" "$TIMEZONE"\
+        "$i_0 $id_ToyBox" "$TOYBOX"\
+        "$i_0 $id_Fingerprint $i_fPrint" "$FINGERPRINT"\
+        "$i_0 $id_DisplayId $i_DPlay" "$DISPLAY_ID"\
+        "$i_0 $id_ScreenDensity" "$DISPLAY_L dpi"\
+        "$i_0 $id_SecurityPatch $i_SecurityPatch" "$PATCH"\
+        "$i_0 $id_dataStatus" "$DATA_ENCRYPTION-$TYPE_ENCRYPTION [$NAME_ENCRYPTION]"\
+        "$i_0 $id_SElinux $i_SELinux" "$SELINUX"\
+        "$i_0 $id_CPU $i_CPU" "$CPUCORE core(s) @ $((CPUFREQ/1000))MHz"\
+        "$i_0 $id_Memory $i_Memory" "$(egrep "MemTotal" /proc/meminfo)"\
+        "$i_0                  " "$(egrep "MemFree" /proc/meminfo)"\
+        "$i_0                  " "$(egrep "MemAvailable" /proc/meminfo)"\
+        "$i_0                  " "$(egrep "SwapTotal" /proc/meminfo)"\
+        "$i_0                  " "$(egrep "SwapFree" /proc/meminfo)"\
+        "$i_0 $id_Storage $i_STORAGE" "$DISK"\
+        "$i_0 $id_Battery $i_Batt" "$BATTERY mAh"\
+        "$i_0 $id_Kernel $i_Kernel" "$KERNEL_V"\
+        "$i_0       $i_time" "$KERNEL_R"\
+        "$i_0 $id_IMEI1" "$IMEI_1$IMEI1"\
+        "$i_0 $id_IMEi2" "$IMEI_2$IMEI2"\
+        "$i_0 $id_BootSystem $i_time" "$SUPTIME"\
+        "$i_0 $id_UpTime $i_time" "$UPTIME"\
+        "$i_0 $id_smartkeydc" "$SMARTKEY_DC"\
+        "$i_0 $id_smartkeylp" "$SMARTKEY_LP"\
+        "$i_0 $id_smartkeysc" "$SMARTKEY_SC"\
+        "$i_0 $id_NotificationSound" "$NOTIFICATION_SOUND"\
+        "$i_0 $id_Alarm $i_Bell" "$ALARM_ALERT"\
+        "$i_0 $id_Ringtone" "$RINGTONE"\
+        "$i_0 $id_GSMBaseband" "$GSMBaseband $GSMBaseband_1"\
+        "$i_0 $id_GSMstat" "$GSMstat"\
+        "$i_0 $id_SIMOperator" "$SIMOperator ($SIM_Country)"\
+        "$i_0 $id_SIMvendor" "$SIMvendor$SIMvendor_1"\
+        "$i_0 $id_Offline $i_Airplane" "$AIRPLANE"\
+        "$i_0 $id_Network" "$NETWORK"\
+        "$i_0 $id_Hostname $i_user1" "$HOSTNAME"\
+        "$i_0 $id_HomePage $i_Net" "$HomePage"\
+        "$i_0 $id_Wifi $i_Wifi" "$WIFI $WIFI_CHANNELS"\
+        "$i_0 $id_koneksi" "$N"
+echo "$_s2----------------------------------------------"  
+echo "----------  $IPackage $i_PAKET  ------------- "
+echo $(pm list packages -3 || echo "not found")
+  echo "-----------------------------------------------"
+  echo "----------  list features  -------------------- "
+  pm list features
+  echo "-----------------------------------------------"
+  #echo "----------  service list  ------------- "
+  #service list
+  #echo "-----------------------------------------------"
+  echo "----------  list libraries  ------------------- "
+  pm list libraries -f
+  echo "-----------------------------------------------"
+  echo "----------  list permission-groups  ----------- "
+  pm list permission-groups
+  echo "-----------------------------------------------"
+  echo "----------  logcat  --------------------------- "
+  logcat -S
+  echo "-----------------------------------------------"
+
+  exit 0
+}
+
+Print_help () {
+# Print help message
+  
+  printf "\nUSAGE: $APPNAME [-id, --indonesia] [-en, --english]\n"
+  printf " \nExample: \`sh $(dirname $0)/$APPNAME --indonesia\`\n"
+  
+    exit 0
+}
+
+# Script starts here
+for pilih in $@
+do
+    case $pilih in
+        -h|--help)
+            Print_help
+            ;;
+        -id|--indonesia)
+            Bahasa
+          print_id
+            ;;
+        -en|--english)
+            English
+          print_id
+            ;;
+        *)
+          echo "Invalid option: '$1'. Type \`$APPNAME -h\` to show help."
+    exit 1
+            ;;
+    esac
+done
+  

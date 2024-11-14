@@ -1,0 +1,21 @@
+[ System_Info]=clear;tui -about;sh t-ui/AddOn/infoHP_id -en
+
+[ Language]=cp -f /sdcard/t-ui/Id/behavior_id.xml /sdcard/t-ui/behavior.xml;cp -f /sdcard/t-ui/Id/alias_id.txt /sdcard/t-ui/alias.txt;restart
+
+<!--warna dan tema-->
+[ Theme(1-3)]=cp -f /sdcard/t-ui/color/w-0%.xml /sdcard/t-ui/theme.xml
+[ Banner(a-e)]=config -set custom_command sh /sdcard/t-ui/AddOn/ascii/ASCIIart -%
+<!--warna dan tema-->
+
+[ CLS]=clear
+[ RST]=restart
+[🔦 Flash]=flash
+[ Weather_loc]=config -set weather_location %
+[ Voc]=search -u http://learnersdictionary.com/definition/%
+[ Aliases]=alias ls
+[Icons]=cat t-ui/icons.txt
+
+
+
+
+

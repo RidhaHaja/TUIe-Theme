@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMD>
+<default_search value="-gg"/>
+
+<help_priority value = "1" />
+<call_priority value = "0" />
+</CMD>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EXPERT>
+
+<show_help value="true"/>
+<!--Tampilkan perintah BANTUAN pada bilah saran dari-->
+
+<show_call value="true"/>
+<!--Tampilkan perintah PANGGILAN di bilah saran-->
+
+<show_exit value="false"/>
+<!--Aktifkan/nonaktifkan perintah EXIT-->
+
+<exit_password value="RidaHaja"/>
+<!-- Perintah EXIT meminta kata sandi jika ditentukan dari -->
+
+<use_root value="false"/>
+<!--[true/false]: selalu gunakan root jika memungkinkan -->
+
+<numbering_notes value="true"/>
+<!--[true/false]: catatan diberi nomor secara otomatis -->
+
+<custom_command_timeout value="3600"/>
+<!--batas waktu: 60 (segarkan setiap 60 detik) -->
+
+<custom_command_size value="12"/>
+<show_custom_command value="true"/>
+<custom_command_index value="2.0"/>
+
+<custom_command value="sh /sdcard/t-ui/AddOn/ascii/ASCIIart -a"/>
+
+<termux_timeout value="300"/>
+
+</EXPERT>
